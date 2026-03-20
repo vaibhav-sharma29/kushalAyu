@@ -1,0 +1,285 @@
+.upload-card {
+  background: rgba(0, 200, 150, 0.04);
+  border: 1px solid rgba(0, 200, 150, 0.12);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.drop-zone {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px dashed rgba(0, 200, 150, 0.2);
+  border-radius: 24px;
+  margin: 4px;
+}
+
+.drop-zone:hover,
+.drop-zone.dragging {
+  background: rgba(0, 200, 150, 0.05);
+  border-color: rgba(0, 200, 150, 0.5);
+}
+
+.upload-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 200, 150, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.drop-zone h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.drop-zone p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.file-preview {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(14, 165, 233, 0.06);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+
+.file-name {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.file-size {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.remove-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.remove-btn:hover { color: #ef4444; }
+
+.error-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  color: #fca5a5;
+}
+
+.error-banner p {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fca5a5;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  color: #fca5a5;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 2px;
+}
+
+.upload-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.loading-bar {
+  height: 3px;
+  background: rgba(0,200,150,0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loading-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.report-type-badge {
+  background: rgba(0, 200, 150, 0.1);
+  border: 1px solid rgba(0, 200, 150, 0.25);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.urgency-badge {
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.result-section {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.result-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.result-summary {
+  background: rgba(0, 200, 150, 0.05);
+  border: 1px solid rgba(0, 200, 150, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.result-summary label,
+.next-steps label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.result-summary p {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.findings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.finding-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid var(--fc, var(--primary));
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.finding-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.finding-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.finding-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.finding-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.finding-normal {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.next-steps {
+  background: rgba(0, 200, 150, 0.04);
+  border: 1px solid rgba(0, 200, 150, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.next-steps ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.next-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.next-steps li::before {
+  content: '→';
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .findings-grid { grid-template-columns: 1fr; }
+  .drop-zone { padding: 40px 20px; }
+}

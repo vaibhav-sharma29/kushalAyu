@@ -1,0 +1,262 @@
+.sos-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.sos-btn {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.05));
+  border: 2px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sos-btn:hover:not(:disabled) {
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.3), rgba(239, 68, 68, 0.1));
+  box-shadow: 0 0 60px rgba(239, 68, 68, 0.4);
+}
+
+.sos-btn.located {
+  border-color: rgba(0, 200, 150, 0.5);
+  color: var(--primary);
+  background: radial-gradient(circle, rgba(0, 200, 150, 0.15), rgba(0, 200, 150, 0.05));
+}
+
+.sos-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(239, 68, 68, 0.3);
+  animation: sosPulse 2.5s ease-out infinite;
+}
+
+.r1 { inset: -16px; animation-delay: 0s; }
+.r2 { inset: -32px; animation-delay: 0.5s; }
+.r3 { inset: -48px; animation-delay: 1s; }
+
+@keyframes sosPulse {
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+
+.sos-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.sos-sub {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.location-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 200, 150, 0.08);
+  border: 1px solid rgba(0, 200, 150, 0.2);
+  color: var(--primary);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sms-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+}
+
+.sms-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fca5a5;
+  flex-shrink: 0;
+}
+
+.sms-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.sms-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.sms-sent {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.hospitals-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.hospitals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.hospital-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: border-color 0.3s;
+}
+
+.hospital-card:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.hospital-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hospital-rank {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: rgba(239, 68, 68, 0.4);
+  min-width: 36px;
+}
+
+.hospital-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.hospital-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.hospital-type {
+  padding: 2px 10px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hospital-type.gov {
+  background: rgba(0, 200, 150, 0.1);
+  color: var(--primary);
+}
+
+.hospital-type.pvt {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--secondary);
+}
+
+.open-badge {
+  color: var(--primary);
+  font-size: 12px;
+}
+
+.hospital-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.emergency-numbers h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.number-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 3px solid var(--nc, #ef4444);
+  border-radius: 14px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--nc, #ef4444);
+  transition: all 0.3s;
+}
+
+.number-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.num-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.num-val {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .hospital-card { flex-direction: column; align-items: flex-start; }
+  .hospital-actions { width: 100%; }
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .sms-card { flex-direction: column; text-align: center; }
+}

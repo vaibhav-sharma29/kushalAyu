@@ -1,0 +1,220 @@
+.wellness-form {
+  background: rgba(0, 200, 150, 0.04);
+  border: 1px solid rgba(0, 200, 150, 0.12);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.wellness-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.wellness-form .form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.wellness-form input,
+.wellness-form select {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 200, 150, 0.15);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.wellness-form input:focus,
+.wellness-form select:focus {
+  border-color: rgba(0, 200, 150, 0.4);
+}
+
+.wellness-form select option { background: var(--bg2); }
+
+.wellness-form .disease-chip {
+  background: rgba(0, 200, 150, 0.06);
+  border: 1px solid rgba(0, 200, 150, 0.15);
+  color: var(--text-muted);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.wellness-result {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.score-bmi-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(0, 200, 150, 0.04);
+  border: 1px solid rgba(0, 200, 150, 0.12);
+  border-radius: 20px;
+  padding: 32px 40px;
+}
+
+.score-ring-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.score-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.bmi-info {
+  flex: 1;
+}
+
+.bmi-value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.bmi-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.bmi-unit {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.bmi-category {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+.bmi-tip {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.plan-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.plan-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.plan-header h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.meal-card {
+  background: rgba(0, 200, 150, 0.04);
+  border: 1px solid rgba(0, 200, 150, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.meal-time {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.meal-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.tips-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tips-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tips-list li::before {
+  content: '→';
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .wellness-form .form-row { grid-template-columns: repeat(2, 1fr); }
+  .score-bmi-row { flex-direction: column; padding: 24px; }
+  .meal-grid { grid-template-columns: 1fr; }
+  .wellness-form { padding: 24px 20px; }
+}
